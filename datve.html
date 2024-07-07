@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-clear-sky-white-clouds-blue-sky-background-image_2174284.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .error {
+            color: red;
+        }
+        ul {
+            display: flex;
+            list-style-type: none;
+            background: linear-gradient(to right, rgb(1, 3, 27), #171ae3);
+            margin: 0 auto;
+            padding: 14px 0;
+            border-radius: 5px;
+            width: 100%;
+            justify-content: center;
+        }
+        li {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 14px;
+            border: 1px solid #0736ff;
+            border-radius: 6px;
+            box-shadow: 1px 1px 6px rgba(7, 36, 255, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            background-color: #333;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-left: 8px;
+            margin-right: 250px;
+            vertical-align: middle;
+        }
+        h3 {
+            color: #fff;
+            text-align: center;
+            margin-left: -200px;
+            margin-right: 100px;
+            margin-top: 10px;
+        }
+        .footer {
+            background: linear-gradient(to right,#171ae3, rgb(1, 3, 27) );
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #cccccc;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <ul>
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h3>WL : Win every fLight</h3>
+        <li><a href="home.html">Trang chủ</a></li>
+        <li><a href="qlforcustomer.html">Thông tin chuyến bay đã đặt</a></li>
+        <li><a href="#">Trợ giúp</a></li>
+        <li><a href="login.html">Log in/Sign up</a></li>
+    </ul>
+    <div class="container">
+        <div class="form-container">
+            <div id="vinhlon"></div>
+            <form id="dangky" action="javascript:void(0);" method="post">
+                <div class="form-group">
+                    <label for="hoten">Họ tên:</label>
+                    <input id="hoten" type="text" name="hoten" class="form-control" />
+                    <span id="hotenloi" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cccd">CCCD:</label>
+                    <input id="cccd" type="text" name="cccd" class="form-control" />
+                    <span id="cccdloi" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="text" name="email" class="form-control" />
+                    <span id="emailloi" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="dt">Điện thoại:</label>
+                    <input id="dt" type="text" name="dt" class="form-control" />
+                    <span id="dtloi" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gioitinh" value="nam" checked />
+                        <label class="form-check-label" for="nam">Nam</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gioitinh" value="nu" />
+                        <label class="form-check-label" for="nu">Nữ</label>
+                    </div>
+                    <span id="gioitinhloi" class="error"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2024 WL: Win every fLight. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:vinh@winflight.com">WL@winflight.com</a></p>
+            <p>
+                <a href="#">SĐT : 0988241156 </a> |
+                <a href="https://maps.app.goo.gl/Rk8J7Qg5cd9ZuGhJA?g_st=com.google.maps.preview.copy">Địa Chỉ : Quận Hà Đông Thành Phố Hà Nội </a>
+            </p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var flightData = null;
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var idVe = urlParams.get('id');
+            if (idVe) {
+                $.get("http://localhost:3000/chuyenbay/" + idVe, function(data, status) {
+                    if (status === "success" && data) {
+                        flightData = data;
+                        var veHTML = '<p><strong>Chuyến bay:</strong> ' + data.tenchuyen + '</p>';
+                        veHTML += '<p><strong>Chiều:</strong> ' + (data.chieu === "1" ? 'Khứ hồi' : 'Một chiều') + '</p>';
+                        veHTML += '<p><strong>Điểm đi:</strong> ' + data.diemdi + '</p>';
+                        veHTML += '<p><strong>Điểm đến:</strong> ' + data.diemden + '</p>';
+                        veHTML += '<p><strong>Ngày đi:</strong> ' + data.ngaydi + '</p>';
+                        veHTML += '<p><strong>Giá vé:</strong> ' + data.giave + '</p>';
+                        veHTML += '<p><strong>Hạng bay:</strong> ' + data.hangbay + '</p>';
+                        if (data.chieu === "1") {
+                            veHTML += '<p><strong>Ngày về:</strong> ' + data.ngayve + '</p>';
+                        }
+                        $('#vinhlon').append(veHTML);
+                    } else {
+                        $('#vinhlon').append('<p>Không tìm thấy thông tin vé.</p>');
+                    }
+                }).fail(function() {
+                    $('#vinhlon').append('<p>Đã xảy ra lỗi khi tải thông tin vé.</p>');
+                });
+            } else {
+                $('#vinhlon').append('<p>ID vé không được cung cấp.</p>');
+            }
+
+            function removeVietnameseTones(str) {
+                str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+                str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+                str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+                str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+                str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+                str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+                str = str.replace(/đ/g, "d");
+                str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+                str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+                str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+                str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+                str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+                str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+                str = str.replace(/Đ/g, "D");
+                str = str.replace(/\u0300|\u0301|\u0303|\u0309|\u0323/g, "");
+                str = str.replace(/\u02C6|\u0306|\u031B/g, "");
+                str = str.replace(/ + /g, " ");
+                str = str.trim();
+                str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g, " ");
+                return str;
+            }
+
+            function generateUsername(str) {
+                str = removeVietnameseTones(str).toLowerCase();
+                str = str.replace(/\s+/g, '');
+                return str;
+            }
+
+            function containsViolentWords(str) {
+                var violentWords = ["kill", "murder", "fight"];
+                for (var i = 0; i < violentWords.length; i++) {
+                    if (str.toLowerCase().includes(violentWords[i])) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function validateEmail(email) {
+                var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            var frmDangKy = document.getElementById('dangky');
+            var iHoten = document.getElementById('hoten');
+            var iCCCD = document.getElementById('cccd');
+            var iEmail = document.getElementById('email');
+            var iDt = document.getElementById('dt');
+            var hotenErr = document.getElementById('hotenloi');
+            var cccdErr = document.getElementById('cccdloi');
+            var emailErr = document.getElementById('emailloi');
+            var dtErr = document.getElementById('dtloi');
+
+            frmDangKy.onsubmit = function(event) {
+                event.preventDefault();
+
+                var isValid = true;
+
+                hotenErr.innerText = '';
+                cccdErr.innerText = '';
+                emailErr.innerText = '';
+                dtErr.innerText = '';
+
+                var hoten = iHoten.value.trim();
+                var cccd = iCCCD.value.trim();
+                var email = iEmail.value.trim();
+                var dt = iDt.value.trim();
+
+                if (hoten === '') {
+                    hotenErr.innerText = 'Họ tên không được để trống';
+                    isValid = false;
+                } else if (containsViolentWords(hoten)) {
+                    hotenErr.innerText = 'Họ tên không được chứa từ ngữ bạo lực';
+                    isValid = false;
+                }
+
+                if (cccd === '') {
+                    cccdErr.innerText = 'CCCD không được để trống';
+                    isValid = false;
+                } else if (cccd.length < 6 || cccd.length > 24) {
+                    cccdErr.innerText = 'CCCD phải có độ dài từ 6 đến 24 ký tự';
+                    isValid = false;
+                } else if (/[^0-9]/.test(cccd)) {
+                    cccdErr.innerText = 'CCCD chỉ được chứa số';
+                    isValid = false;
+                }
+
+                if (email === '') {
+                    emailErr.innerText = 'Email không được để trống';
+                    isValid = false;
+                } else if (!validateEmail(email)) {
+                    emailErr.innerText = 'Email không hợp lệ';
+                    isValid = false;
+                }
+
+                if (dt === '') {
+                    dtErr.innerText = 'Điện thoại không được để trống';
+                    isValid = false;
+                }
+
+                var gioitinh = document.querySelector('input[name="gioitinh"]:checked');
+                if (!gioitinh) {
+                    var gioitinhErr = document.getElementById('gioitinhloi');
+                    gioitinhErr.innerText = 'Giới tính không được để trống';
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    var data = {
+                        hoten: hoten,
+                        cccd: cccd,
+                        email: email,
+                        dt: dt,
+                        gioitinh: gioitinh.value,
+                        chuyenbay: flightData
+                    };
+
+                    $.ajax({
+                        url: 'http://localhost:3000/khachhang',
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function(response) {
+                            console.log(response);
+                            alert('Đăng ký thành công');
+                        },
+                        error: function(xhr, status, error) {
+                            console.log(xhr.responseText);
+                            alert('Đăng ký không thành công. Vui lòng thử lại.');
+                        }
+                    });
+
+                    sessionStorage.setItem('customerInfo', JSON.stringify(data));
+
+                    window.location.href = 'qr.html';
+                }
+                return false;
+            };
+        });
+    </script>
+</body>
+</html>

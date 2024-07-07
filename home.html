@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="new.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        h1{
+            background: linear-gradient(90deg, #00ffff, #FF02FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h3 {
+            color: #fff;
+            text-align: center;
+            margin-left: -200px;
+            margin-right: 100px;
+            margin-top: 10px;
+        }
+        .hot{
+            text-align: center;
+            margin-top: 50px;
+            background:linear-gradient(to right, #00ffff, #FF02FF);
+            color: white;
+            border-radius: 5%;
+            height: 50px;
+        }
+        .menu {
+            display: flex;
+            list-style-type: none;
+            background:linear-gradient(to right, rgb(1, 3, 27), #171ae3);
+            margin: 0 auto;
+            padding: 14px 0;
+            border-radius: 5px;
+            width: 100%;
+            justify-content: center;
+        }
+        .manu {
+            margin: 0 15px;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 14px;
+            border: 1px solid #0736ff;
+            border-radius: 6px;
+            box-shadow: 1px 1px 6px rgba(7, 36, 255, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        a:hover {
+            background-color: #333;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-left: 8px;
+            margin-right: 250px;
+            vertical-align: middle;
+        }
+        .footer {
+          background: linear-gradient(to right,#171ae3, rgb(1, 3, 27) );
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #cccccc;
+        }
+        .containerss{
+            width: 700px;
+            margin-left: 290px;
+            margin-top: 30px;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 30px;
+            background:linear-gradient(to right, #00ffff, #FF02FF);
+            color: white;
+            border-radius: 5%;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+        #mySlider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.singleSlide {
+  background-size: cover;
+  height: 300px;
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  top: 0px;
+}
+
+.slideOverlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+}
+
+#sliderNav {
+  position: relative;
+  top: -175px;
+}
+
+#sliderNav:hover {
+  cursor: pointer;
+}
+
+#sliderPrev {
+  position: relative;
+  float: left;
+  left: 50px;
+}
+
+#sliderNext {
+  position: relative;
+  float: right;
+  right: 50px;
+}
+
+#sliderNext img,
+#sliderPrev img {
+  width: 32px;
+}
+
+@-webkit-keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+
+.slideInRight {
+  left: -100%;
+  -webkit-animation: slideIn 0.5s forwards; 
+  animation: slideIn 0.5s forwards; 
+}
+
+.slideInLeft {
+  left: 100%;
+  -webkit-animation: slideIn 0.5s forwards; 
+  animation: slideIn 0.5s forwards; 
+}
+
+@-webkit-keyframes slideOutLeft {
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes slideOutLeft {
+  100% {
+    left: -100%;
+  }
+}
+
+.slideOutLeft {
+  -webkit-animation: slideOutLeft 0.5s forwards; 
+  animation: slideOutLeft 0.5s forwards; 
+}
+
+@-webkit-keyframes slideOutRight {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slideOutRight {
+  100% {
+    left: 100%;
+  }
+}
+
+.slideOutRight {
+  -webkit-animation: slideOutRight 0.5s forwards; 
+  animation: slideOutRight 0.5s forwards; 
+}
+#uudai{
+  border-color: #ffffff;
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgba(7, 36, 255, 0.5);
+  width: 1100px;
+  margin-left: 5%;
+  margin-bottom: 100px;
+}
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h3>WL : Win every fLight </h3>
+        <li class="manu"><a href="home.html">Trang chủ</a></li>
+        <li class="manu"><a href="qlforcustomer.html">Thông tin chuyến bay đã đặt</a></li>
+        <li class="manu"><a href="#">Trợ giúp</a></li>
+        <li class="manu"><a href="login.html">Log in/Sign up</a></li>
+    </ul>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Tìm Chuyến Bay Cho Bạn</h1>
+    </div>
+    <div class="search-container">
+        <div class="search-box">
+            <div class="input-group">
+                <div id="nut">
+                    <div>
+                        <label for="diemDi">Điểm đi</label>
+                        <select id="diemDi" name="diemDi" class="form-select">
+                            <option value="Sân bay Quốc tế Nội Bài (HAN)">Sân bay Quốc tế Nội Bài (HAN)</option>
+                            <option value="Sân bay Quốc tế Tân Sơn Nhất (SGN)">Sân bay Quốc tế Tân Sơn Nhất (SGN)</option>
+                            <option value="Sân bay Quốc tế Đà Nẵng (DAD)">Sân bay Quốc tế Đà Nẵng (DAD)</option>
+                            <option value="Sân bay Quốc tế Cam Ranh (CXR)">Sân bay Quốc tế Cam Ranh (CXR)</option>
+                            <option value="Sân bay Quốc tế Phú Quốc (PQC)">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                            <option value="Sân bay Quốc tế Changi (SIN)">Sân bay Quốc tế Changi (SIN)</option>
+                            <option value="Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)">Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)</option>
+                            <option value="Sân bay Quốc tế Heathrow (LHR)">Sân bay Quốc tế Heathrow (LHR)</option>
+                            <option value="Sân bay Quốc tế Dubai (DXB)">Sân bay Quốc tế Dubai (DXB)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="diemDen">Điểm đến</label>
+                        <select id="diemDen" name="diemDen" class="form-select">
+                            <option value="Sân bay Quốc tế Nội Bài (HAN)">Sân bay Quốc tế Nội Bài (HAN)</option>
+                            <option value="Sân bay Quốc tế Tân Sơn Nhất (SGN)">Sân bay Quốc tế Tân Sơn Nhất (SGN)</option>
+                            <option value="Sân bay Quốc tế Đà Nẵng (DAD)">Sân bay Quốc tế Đà Nẵng (DAD)</option>
+                            <option value="Sân bay Quốc tế Cam Ranh (CXR)">Sân bay Quốc tế Cam Ranh (CXR)</option>
+                            <option value="Sân bay Quốc tế Phú Quốc (PQC)">Sân bay Quốc tế Phú Quốc (PQC)</option>
+                            <option value="Sân bay Quốc tế Changi (SIN)">Sân bay Quốc tế Changi (SIN)</option>
+                            <option value="Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)">Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)</option>
+                            <option value="Sân bay Quốc tế Heathrow (LHR)">Sân bay Quốc tế Heathrow (LHR)</option>
+                            <option value="Sân bay Quốc tế Dubai (DXB)">Sân bay Quốc tế Dubai (DXB)</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="nuts">
+                    <div>
+                        <label for="ngayDi">Ngày đi</label>
+                        <input type="date" id="ngayDi" placeholder="Ngày đi...">
+                    </div>
+                    <div>
+                        <label for="ngayVe">Ngày về</label>
+                        <input type="date" id="ngayVe" placeholder="Ngày về...">
+                    </div>
+                    <div>
+                        <label for="hangBay">Hạng bay</label>
+                        <select id="hangBay" name="hangBay" class="form-select">
+                            <option value="">Tất cả</option>
+                            <option value="Phổ thông">Phổ thông</option>
+                            <option value="Thương gia">Thương gia</option>
+                            <option value="Hạng nhất">Hạng nhất</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="button" id="searchBtn">Tìm kiếm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="danhSachChuyenBayContainer">
+            <h2 class="mt-5">Danh sách chuyến bay</h2>
+            <table id="danhSachChuyenBay" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tên chuyến</th>
+                        <th>Chiều</th>
+                        <th>Điểm đi</th>
+                        <th>Điểm đến</th>
+                        <th>Ngày đi</th>
+                        <th>Giờ đi</th>
+                        <th>Ngày về (nếu có)</th>
+                        <th>Giá vé</th>
+                        <th>Hạng bay</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <section>
+        <div class="containerss">
+          <h2>Các điểm du lịch lý tưởng</h2>
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="4"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="5"></li>
+                <li data-bs-target="#myCarousel" data-bs-slide-to="6"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="https://toquoc.mediacdn.vn/2021/2/9/img4109-16128501450771564651202.jpg" alt="PhuQuoc" style="width:700px;">
+                    <div class="carousel-caption">
+                      <h3>Đảo Phú Quốc</h3>
+                      <p>Sunset Town ở đảo Phú Quốc về đêm </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://live.staticflickr.com/908/39918346980_713bc412a4_b.jpg" alt="TPHCM" style="width:700px;">
+                    <div class="carousel-caption">
+                      <h3>TP Hồ Chí Minh</h3>
+                      <p>Thành phố Hồ Chí Minh nổi tiếng phồn hoa và cũng vô cùng đẹp đẽ , trong đó toàn LandMark 81 cao chọc trời được xem như 1 biểu tượng của nơi này</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="https://reviewvilla.vn/wp-content/uploads/2022/05/kinh-nghiem-du-lich-ha-noi-5-1024x577.jpg" alt="HaNoi" style="width:700px;">
+                    <div class="carousel-caption">
+                      <h3>Hà Nội</h3>
+                      <p>Hà Nội là thủ đô của Việt Nam , 1 thành phố cổ kính nhưng mang đậm dấu ấn dân tộc !</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="https://cdn3.ivivu.com/2022/05/bao-tang-tuong-lai-dubai-ivivu-2.jpg" alt="Dubai" style="width:700px;">
+                    <div class="carousel-caption">
+                      <h3>Dubai</h3>
+                      <p>Đất nước mà khi nhắc đến ai cũng phải thốt lên rằng " Đất nước của sự xa hoa" vẫn có người kể rằng dù sang Dubai làm ăn xin cũng giàu </p>
+                    </div>
+                  </div>
+                <div class="carousel-item active">
+                  <img src="https://imagevietnam.vnanet.vn//MediaUpload/Org/2023/12/19/hcml-3.jpg" alt="Los Angeles" style="width:700px;">
+                  <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                    <p>Thành phố đông dân thứ 2 nước Mỹ, Los Angeles vô cùng nhộn nhịp với nhiều hoạt động giải trí, văn hoá, điện ảnh, thời trang và thể thao sôi nổi, đặc biệt là ở kinh đô điện ảnh Hollywood và Beverly Hills. Thành phố đứng hạng sáu về chỉ số xếp hạng các thành phố trên thế giới và đứng hạng 9 xét về năng lực kinh tế</p>
+                  </div>
+                </div>
+          
+                <div class="carousel-item">
+                  <img src="https://assets.editorial.aetnd.com/uploads/2010/03/gettyimages-584791924.jpg?width=3840&height=1920&crop=3840%3A1920%2Csmart&quality=75&auto=webp" alt="Chicago" style="width:700px;">
+                  <div class="carousel-caption">
+                    <h3>Chicago</h3>
+                    <p>Còn được gọi là "Thành phố gió lông " Không chỉ có nền giáo dục chất lượng cao, thành phố này còn nổi tiếng với các món ăn ngon, người dân thân thiện, và đặc biệt là mức sinh hoạt phí cực kỳ phải chăng so với nước thành phố khác của Mỹ</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://hangkhongmy.vn/wp-content/uploads/2018/02/nhung-su-thu-vi-ve-buc-tuong-nu-tu-co-ban-chua-biet-1.jpg" alt="New York" style="width:700px;">
+                  <div class="carousel-caption">
+                    <h3>New York</h3>
+                    <p>Là thành phố đông dân nhất nước Mỹ , đặc biệt thành phố có Statue of Liberty (tượng nữ thần tự do ) là 1 kỳ quang thế giới mới do một kiến trúc sư người pháp điêu khắc được đặt tại đây</p>
+                  </div>
+                </div>
+            
+              </div>
+
+            </div>
+          </div>
+    </section>
+    <section class="section-2">
+      <h2 style="margin-top: 30px;">ƯU ĐÃI GIỜ VÀNG</h2>
+      <img style="width: 1100px; margin-left: 5% ; border-radius: 10px;" src="qc.jpg" alt="Quảng cáo">
+      <div id="uudai">
+          <h3 style="background: linear-gradient(90deg, #00ffff, #FF02FF);
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent; margin-left: 5%;">
+              TIẾT KIỆM HƠN KHI BAY CHUYẾN SÁNG SỚM/TỐI MUỘN
+          </h3>
+          <p style="padding-left: 30px; padding-right: 30px;">
+              Với bí quyết mua vé máy bay trong khung giờ linh hoạt, các chặng bay nội địa áp dụng có mức giá hấp dẫn chỉ từ
+              <strong>1.098.000 VND/chiều</strong> cho hạng Phổ thông và từ <strong>1.905.000 VND/chiều</strong> cho hạng Thương gia
+              (mức giá đã bao gồm thuế, phí), tiết kiệm hơn lên đến 30% giá vé so với mức giá tại thời điểm trưa hoặc chiều.
+          </p>
+          <br>
+          <p style="padding-left: 30px; padding-right: 30px;">
+              Tham gia ngay chương trình ưu đãi chuyến bay khởi hành vào sáng sớm (trước 6h sáng) và tối muộn (sau 21h tối) với chi tiết như sau:
+              <br><br>
+              ⭐️ Thời gian mua và bay: Từ nay đến hết ngày 27/12/2024.
+              <br><br>
+              ⭐️ Áp dụng cho các chuyến bay nội địa khai thác bởi WL Airlines. Đối với hạng Thương gia, Quý khách xem chi tiết giai đoạn và các chặng bay áp dụng tại đây.
+              <br><br>
+              ⭐️ Mua vé tại www.WLairlines.com, ứng dụng di động, phòng vé và đại lý chính thức của WL Airlines.
+          </p>
+          <p style="padding-left: 30px; padding-right: 30px;">
+              👨‍👩‍👧‍👦 Ngoài ra, khi mua vé và bay trong giai đoạn từ nay đến hết ngày 06/09/2024, Quý khách được giảm 10% giá vé cho nhóm từ 4 khách trở lên và giảm 15% giá vé cho nhóm từ 8 khách trở lên, áp dụng cho hạng Phổ thông tiết kiệm. Chi tiết chặng bay áp dụng cho ưu đãi mua theo nhóm Quý khách xem thêm tại đây.
+          </p>
+          <h4 style="padding-left: 30px; padding-right: 30px;">Lưu ý cho ưu đãi mua theo nhóm:</h4>
+          <ul style="padding-left: 30px; padding-right: 30px;">
+              <li>Giá vé ưu đãi giảm sâu tới 50%.</li>
+              <li>Ưu đãi mua theo nhóm áp dụng cho hành trình khứ hồi, không áp dụng cho hành trình nhiều chặng.</li>
+              <li>Đổi vé có điều kiện được phép đổi vé, chỉ được đổi vé khi cả nhóm có cùng thời gian và hành trình mới.</li>
+              <li>Đổi vé có điều kiện được phép hoàn, áp dụng hoàn vé cho cả nhóm khách, không hoàn vé cho từng hành khách.</li>
+          </ul>
+          <p style="padding-left: 30px; padding-right: 30px;">
+              Tham gia ngay chương trình WL - Cộng đồng Win fLight để nhận thêm ưu đãi giảm 10% giá vé hạng Phổ thông tiết kiệm khi mua vé máy bay nội địa Việt Nam vào các khung giờ sáng sớm/tối muộn.
+          </p>
+          <p style="padding-left: 30px; padding-right: 30px;">
+              🤩 Lên kế hoạch nghỉ dưỡng chỉ trong "một nốt nhạc" với combo ưu đãi độc quyền từ Vinpearl chỉ từ <strong>3.000.000 VND/người</strong> (bao gồm vé máy bay và khách sạn cho 3 ngày 2 đêm) khi bay chuyến tối muộn cùng WL Airlines. 
+          </p>
+          <h4 style="padding-left: 30px; padding-right: 30px;">LỢI ÍCH CỦA VIỆC ĐẶT VÉ TRỰC TUYẾN</h4>
+          <div style="display: flex; justify-content: space-around;">
+              <div>
+                  <h4 style="text-align: center;">🎫</h4>
+                  <h4 style="text-align: center;">Miễn phí xuất vé</h4>
+                  <p style="text-align: center; width: 300px;">Miễn hoàn toàn phí xuất vé khi mua vé máy bay trên website và ứng dụng di động.</p>
+              </div>
+              <div>
+                  <h4 style="text-align: center;">📱</h4>
+                  <h4 style="text-align: center;">Ưu đãi sẵn sàng</h4>
+                  <p style="text-align: center; width: 300px;">Nhận ngay ưu đãi hoàn tiền/giảm giá lên đến 1.500.000 VND khi mua vé trực tuyến và thanh toán bằng thẻ ngân hàng, ví điện tử...</p>
+              </div>
+              <div>
+                  <h4 style="text-align: center;">🎁</h4>
+                  <h4 style="text-align: center;">Đặc quyền hội viên WL</h4>
+                  <p style="text-align: center; width: 300px;">Ưu đãi hấp dẫn giảm 5% giá vé và nhân đôi dặm thưởng, dặm xét hạng. Khám phá thêm tại đây .</p>
+              </div>
+          </div>
+      </div>
+  </section>  
+    <div class="footer">
+      <div class="container">
+          <p>&copy; 2024 WL: Win every fLight. All rights reserved.</p>
+          <p>Contact us: <a href="mailto:vinh@winflight.com">WL@winflight.com</a></p>
+          <p>
+              <a href="#">SĐT : 0988241156 </a> |
+              <a href="https://maps.app.goo.gl/Rk8J7Qg5cd9ZuGhJA?g_st=com.google.maps.preview.copy">Địa Chỉ : Quận Hà Đông Thành Phố Hà Nội </a>
+          </p>
+      </div>
+  </div>
+    <script>
+         function prevSlide() {
+  var nextSlideIndex;
+  if (currentSlideIndex === 0) {
+    nextSlideIndex = slideArray.length - 1;
+  } else {
+    nextSlideIndex = currentSlideIndex - 1;
+  }
+
+  document.getElementById("slide" + nextSlideIndex).style.left = "-100%";
+  document.getElementById("slide" + currentSlideIndex).style.left = 0;
+    document
+    .getElementById("slide" + nextSlideIndex)
+    .setAttribute("class", "singleSlide slideInLeft");
+  document
+    .getElementById("slide" + currentSlideIndex)
+    .setAttribute("class", "singleSlide slideOutRight");
+  currentSlideIndex = nextSlideIndex;
+}
+function nextSlide() {
+  var nextSlideIndex;
+  if (currentSlideIndex === slideArray.length - 1) {
+    nextSlideIndex = 0;
+  } else {
+    nextSlideIndex = currentSlideIndex + 1;
+  }
+
+  document.getElementById("slide" + nextSlideIndex).style.left = "100%";
+  document.getElementById("slide" + currentSlideIndex).style.left = 0;
+
+  document
+    .getElementById("slide" + nextSlideIndex)
+    .setAttribute("class", "singleSlide slideInRight");
+  document
+    .getElementById("slide" + currentSlideIndex)
+    .setAttribute("class", "singleSlide slideOutLeft");
+
+  currentSlideIndex = nextSlideIndex;
+}
+       $(document).ready(function () {
+    taiDanhSachChuyenBay();
+    $('#searchBtn').click(function () {
+        searchChuyenBay();
+    });
+    $('#diemDi, #diemDen, #ngayDi, #ngayVe').keypress(function (e) {
+        if (e.which == 13) {
+            searchChuyenBay();
+        }
+    });
+
+    function taiDanhSachChuyenBay() {
+        $('#danhSachChuyenBay tbody').empty();
+        $.get("http://localhost:3000/chuyenbay", function (data, status) {
+            data.forEach(function (chuyenbay) {
+                hienThiChuyenBay(chuyenbay);
+            });
+        });
+    }
+
+    function hienThiChuyenBay(chuyenbay) {
+        var item = '<tr>' +
+            '<td>' + chuyenbay.tenchuyen + '</td>' +
+            '<td>' + (chuyenbay.chieu === "1" ? 'Khứ hồi' : 'Một chiều') + '</td>' +
+            '<td>' + chuyenbay.diemdi + '</td>' +
+            '<td>' + chuyenbay.diemden + '</td>' +
+            '<td>' + chuyenbay.ngaydi + '</td>' +
+            '<td>' + chuyenbay.gio + '</td>';
+        if (chuyenbay.chieu === "1") {
+            item += '<td>' + chuyenbay.ngayve + '</td>';
+        } else {
+            item += '<td>-</td>';
+        }
+        item += '<td>' + chuyenbay.giave + '</td>' +
+            '<td>' + chuyenbay.hangbay + '</td>' +
+            '<td>' +
+            '<a href="datve.html?id=' + chuyenbay.id + '" class="btn btn-warning btn-sm" onclick="suaChuyenBay(\'' + chuyenbay.id + '\')">Đặt vé</a> ' +
+            '</td>' +
+            '</tr>';
+        $('#danhSachChuyenBay tbody').append(item);
+    }
+
+    function searchChuyenBay() {
+        var diemDi = $('#diemDi').val().toLowerCase();
+        var diemDen = $('#diemDen').val().toLowerCase();
+        var ngayDi = $('#ngayDi').val();
+        var ngayVe = $('#ngayVe').val();
+        var hangBay = $('#hangBay').val();
+
+        $.get("http://localhost:3000/chuyenbay", function (data, status) {
+            $('#danhSachChuyenBay tbody').empty();
+            data.forEach(function (chuyenbay) {
+                if ((diemDi === "" || chuyenbay.diemdi.toLowerCase().includes(diemDi)) &&
+                    (diemDen === "" || chuyenbay.diemden.toLowerCase().includes(diemDen)) &&
+                    (ngayDi === "" || chuyenbay.ngaydi === ngayDi) &&
+                    (ngayVe === "" || (chuyenbay.ngayve && chuyenbay.ngayve === ngayVe)) &&
+                    (hangBay === "" || chuyenbay.hangbay.toLowerCase() === hangBay.toLowerCase())) {
+                    hienThiChuyenBay(chuyenbay);
+                }
+            });
+        });
+    }
+});
+    </script>
+</body>
+
+</html>

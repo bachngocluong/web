@@ -1,0 +1,344 @@
+{
+  "chuyenbay": [
+    {
+      "id": "92df",
+      "tenchuyen": "WL7793972",
+      "chieu": "1",
+      "hangbay": "Hạng Nhất",
+      "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+      "diemden": "Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)",
+      "gio": "18:35",
+      "ngaydi": "2024-06-23",
+      "ngayve": "2024-06-30",
+      "giave": "10,000,000"
+    },
+    {
+      "tenchuyen": "WL1828499",
+      "chieu": "0",
+      "hangbay": "Phổ Thông",
+      "diemdi": "Sân bay Quốc tế Cam Ranh (CXR)",
+      "diemden": "Sân bay Quốc tế Tân Sơn Nhất (SGN)",
+      "gio": "16:42",
+      "ngaydi": "2024-06-22",
+      "ngayve": "",
+      "giave": "11,000,000",
+      "id": "f021"
+    },
+    {
+      "id": "39da",
+      "tenchuyen": "WL12356735",
+      "chieu": "0",
+      "hangbay": "Hạng Nhất",
+      "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+      "diemden": "Sân bay Quốc tế Dubai (DXB)",
+      "gio": "23:08",
+      "ngaydi": "2024-06-21",
+      "ngayve": "",
+      "giave": "12,000,000"
+    },
+    {
+      "tenchuyen": "WL1234424",
+      "chieu": "0",
+      "hangbay": "Phổ Thông",
+      "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+      "diemden": "Sân bay Quốc tế Phú Quốc (PQC)",
+      "gio": "14:52",
+      "ngaydi": "2024-06-23",
+      "ngayve": "",
+      "giave": "10,000,000",
+      "id": "775d"
+    },
+    {
+      "tenchuyen": "WL612873",
+      "chieu": "1",
+      "hangbay": "Hạng Nhất",
+      "diemdi": "Sân bay Quốc tế Heathrow (LHR)",
+      "diemden": "Sân bay Quốc tế Nội Bài (HAN)",
+      "gio": "16:10",
+      "ngaydi": "2024-06-29",
+      "ngayve": "2024-07-26",
+      "giave": "10,000,000",
+      "id": "9a77"
+    },
+    {
+      "id": "37e0",
+      "tenchuyen": "WL779397289",
+      "chieu": "1",
+      "hangbay": "Phổ Thông",
+      "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+      "diemden": "Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)",
+      "gio": "17:11",
+      "ngaydi": "2024-06-27",
+      "ngayve": "2024-06-30",
+      "giave": "100,000,000"
+    },
+    {
+      "id": "b019",
+      "tenchuyen": "WL12445843",
+      "chieu": "0",
+      "hangbay": "Hạng Nhất",
+      "diemdi": "Sân bay Quốc tế Phú Quốc (PQC)",
+      "diemden": "Sân bay Quốc tế Dubai (DXB)",
+      "gio": "00:24",
+      "ngaydi": "2024-06-30",
+      "ngayve": "",
+      "giave": "20,000,000"
+    }
+  ],
+  "khachhang": [
+    {
+      "id": "7d9e",
+      "hoten": "Nguyễn Văn Vinh",
+      "cccd": "09284942982",
+      "email": "vinhroy1811@gmail.com",
+      "dt": "27373274872",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "id": "92df",
+        "tenchuyen": "WL7793972",
+        "chieu": "1",
+        "hangbay": "Hạng Nhất",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)",
+        "gio": "18:35",
+        "ngaydi": "2024-06-23",
+        "ngayve": "2024-06-30",
+        "giave": "10,000,000"
+      }
+    },
+    {
+      "id": "dc7a",
+      "hoten": "Bạch Ngọc Lương",
+      "cccd": "76234892749",
+      "email": "landuong@gmail.com",
+      "dt": "9024892842",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "id": "37e0",
+        "tenchuyen": "WL779397289",
+        "chieu": "1",
+        "hangbay": "Phổ Thông",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)",
+        "gio": "17:11",
+        "ngaydi": "2024-06-27",
+        "ngayve": "2024-06-30",
+        "giave": "100,000,000"
+      }
+    },
+    {
+      "id": "c45f",
+      "hoten": "Nguyễn Phương Nam",
+      "cccd": "0284983394",
+      "email": "npn@gmail.com",
+      "dt": "9820048200",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "tenchuyen": "WL612873",
+        "chieu": "1",
+        "hangbay": "Hạng Nhất",
+        "diemdi": "Sân bay Quốc tế Heathrow (LHR)",
+        "diemden": "Sân bay Quốc tế Nội Bài (HAN)",
+        "gio": "16:10",
+        "ngaydi": "2024-06-29",
+        "ngayve": "2024-07-26",
+        "giave": "10,000,000",
+        "id": "9a77"
+      }
+    },
+    {
+      "id": "a476",
+      "hoten": "Phạm Văn Huy",
+      "cccd": "0298489384",
+      "email": "pvh@gmail.com",
+      "dt": "0983847483",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "tenchuyen": "WL1234424",
+        "chieu": "0",
+        "hangbay": "Phổ Thông",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Phú Quốc (PQC)",
+        "gio": "14:52",
+        "ngaydi": "2024-06-23",
+        "ngayve": "",
+        "giave": "10,000,000",
+        "id": "775d"
+      }
+    },
+    {
+      "id": "39ba",
+      "hoten": "Đỗ Văn Vinh",
+      "cccd": "0922934839",
+      "email": "aevinh55@gmail.com",
+      "dt": "0929387218",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "id": "39da",
+        "tenchuyen": "WL12356735",
+        "chieu": "0",
+        "hangbay": "Hạng Nhất",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Dubai (DXB)",
+        "gio": "23:08",
+        "ngaydi": "2024-06-21",
+        "ngayve": "",
+        "giave": "12,000,000"
+      }
+    },
+    {
+      "id": "5fab",
+      "hoten": "Đinh Hoài Nam",
+      "cccd": "029849284294",
+      "email": "dinhnam@gmail.com",
+      "dt": "0992823782",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "id": "37e0",
+        "tenchuyen": "WL779397289",
+        "chieu": "1",
+        "hangbay": "Phổ Thông",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)",
+        "gio": "17:11",
+        "ngaydi": "2024-06-27",
+        "ngayve": "2024-06-30",
+        "giave": "100,000,000"
+      }
+    },
+    {
+      "id": "141f",
+      "hoten": "Trần Mạnh Tiến",
+      "cccd": "02938429849",
+      "email": "trantien@gmail.com",
+      "dt": "0923899183",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "id": "39da",
+        "tenchuyen": "WL12356735",
+        "chieu": "0",
+        "hangbay": "Hạng Nhất",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Dubai (DXB)",
+        "gio": "23:08",
+        "ngaydi": "2024-06-21",
+        "ngayve": "",
+        "giave": "12,000,000"
+      }
+    },
+    {
+      "id": "24bf",
+      "hoten": "Nguyễn Văn Vinh",
+      "cccd": "08288837822",
+      "email": "vinhroy1811@gmail.com",
+      "dt": "0928828123",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "tenchuyen": "WL1234424",
+        "chieu": "0",
+        "hangbay": "Phổ Thông",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Phú Quốc (PQC)",
+        "gio": "14:52",
+        "ngaydi": "2024-06-23",
+        "ngayve": "",
+        "giave": "10,000,000",
+        "id": "775d"
+      }
+    },
+    {
+      "id": "cc95",
+      "hoten": "Nguyễn Ngọc Ánh",
+      "cccd": "02842048204",
+      "email": "anh@gmail.com",
+      "dt": "0982382873",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "id": "37e0",
+        "tenchuyen": "WL779397289",
+        "chieu": "1",
+        "hangbay": "Phổ Thông",
+        "diemdi": "Sân bay Quốc tế Nội Bài (HAN)",
+        "diemden": "Sân bay Quốc tế Hartsfield-Jackson Atlanta (ATL)",
+        "gio": "17:11",
+        "ngaydi": "2024-06-27",
+        "ngayve": "2024-06-30",
+        "giave": "100,000,000"
+      }
+    },
+    {
+      "id": "0cbd",
+      "hoten": "Lê Đình Vinh",
+      "cccd": "02937482423",
+      "email": "vinhvinh@gmail.com",
+      "dt": "092848272",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "tenchuyen": "WL1828499",
+        "chieu": "0",
+        "hangbay": "Phổ Thông",
+        "diemdi": "Sân bay Quốc tế Cam Ranh (CXR)",
+        "diemden": "Sân bay Quốc tế Tân Sơn Nhất (SGN)",
+        "gio": "16:42",
+        "ngaydi": "2024-06-22",
+        "ngayve": "",
+        "giave": "11,000,000",
+        "id": "f021"
+      }
+    },
+    {
+      "id": "94f9",
+      "hoten": "Đinh Trường Kiên",
+      "cccd": "0294324724",
+      "email": "kien@gmail.com",
+      "dt": "02493482242",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "tenchuyen": "WL1828499",
+        "chieu": "0",
+        "hangbay": "Phổ Thông",
+        "diemdi": "Sân bay Quốc tế Cam Ranh (CXR)",
+        "diemden": "Sân bay Quốc tế Tân Sơn Nhất (SGN)",
+        "gio": "16:42",
+        "ngaydi": "2024-06-22",
+        "ngayve": "",
+        "giave": "11,000,000",
+        "id": "f021"
+      }
+    },
+    {
+      "id": "9735",
+      "hoten": "Đinh Trường Phong",
+      "cccd": "0294829814",
+      "email": "phong@gmail.com",
+      "dt": "92833748242",
+      "gioitinh": "nam",
+      "chuyenbay": {
+        "id": "b019",
+        "tenchuyen": "WL12445843",
+        "chieu": "0",
+        "hangbay": "Hạng Nhất",
+        "diemdi": "Sân bay Quốc tế Phú Quốc (PQC)",
+        "diemden": "Sân bay Quốc tế Dubai (DXB)",
+        "gio": "00:24",
+        "ngaydi": "2024-06-30",
+        "ngayve": "",
+        "giave": "20,000,000"
+      }
+    }
+  ],
+  "ttkh": [
+    {
+      "id": "1",
+      "username": "vinhroy1811@gmail.com",
+      "email": "aevinh55@gmail.com",
+      "password": "11223444"
+    },
+    {
+      "id": "09c3",
+      "username": "landuong",
+      "email": "landuong@gmail.com",
+      "password": "715736123"
+    }
+  ]
+}
